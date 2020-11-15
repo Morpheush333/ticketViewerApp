@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
+</head>
+<body>
+<h2>Ticket</h2>
+<table>
+    <tr><th>Id</th>
+        <th>Description</th>
+        <th>Subject</th>
+    </tr>
+    <tr th:each="field : ${item}">
+        <td th:text="${field.id}"></td>
+        <td th:text="${field.description}"></td>
+        <td th:text="${field.subject}"></td>
+    </tr>
+</table>
+<a th:href="@{/ticketViewer/tickets}">return</a>
+</body>
+</html>
